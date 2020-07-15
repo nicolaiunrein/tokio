@@ -28,6 +28,10 @@ cfg_codec! {
     pub mod codec;
 }
 
+cfg_io! {
+    pub mod io;
+}
+
 cfg_udp! {
     pub mod udp;
 }

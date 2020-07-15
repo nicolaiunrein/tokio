@@ -24,10 +24,11 @@ categories = ["asynchronous"]
 default = []
 
 # Shorthand for enabling everything
-full = ["codec", "udp", "compat"]
+full = ["codec", "io", "udp", "compat"]
 
 compat = ["futures-io",]
 codec = ["tokio/stream"]
+io = []
 udp = ["tokio/udp"]
 
 [dependencies]
