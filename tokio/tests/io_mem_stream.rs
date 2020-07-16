@@ -1,5 +1,7 @@
-use tokio::io::{AsyncReadExt, AsyncWriteExt};
-use tokio_util::io::MemStream;
+#![warn(rust_2018_idioms)]
+#![cfg(feature = "full")]
+
+use tokio::io::{AsyncReadExt, AsyncWriteExt, MemStream};
 
 #[tokio::test]
 async fn ping_pong() {

@@ -1,8 +1,9 @@
 //! IO over in-process memory
 
+use crate::io::{AsyncRead, AsyncWrite};
+
 use std::{task::{self, Poll, Waker}, pin::Pin, sync::{Arc, Mutex}};
 use bytes::{Buf, BytesMut};
-use tokio::io::{AsyncRead, AsyncWrite};
 
 /// A bidirectional pipe to read and write bytes in memory.
 ///
@@ -15,7 +16,7 @@ use tokio::io::{AsyncRead, AsyncWrite};
 /// ```
 /// # async fn ex() -> std::io::Result<()> {
 /// # use tokio::io::{AsyncReadExt, AsyncWriteExt};
-/// use tokio_util::io::MemStream;
+/// use tokio::io::MemStream;
 ///
 /// let (mut client, mut server) = MemStream::pair();
 ///
